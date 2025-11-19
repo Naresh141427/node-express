@@ -12,7 +12,7 @@ const userRoutes = require("./routes/userRoutes")
 
 const app = express()
 app.use(express.json())
-app.use((request, response, next) => {
+app.use((request, _, next) => {
     request.userDb = userDb
     request.productsDb = productsDb
     next()
